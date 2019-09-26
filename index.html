@@ -1,30 +1,149 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-  <title>SFS</title>
-  <link rel="stylesheet" href="assets/css/main.css"/>
-</head>
-<body>
-  <nav id="site-nav">
-    <div class="container">
-      <div class="left-side">
-        <div class="logo"><a href="#">SFS</a></div>
-        <div class="search-form" id="search-form">
-          <input class="search-input" type="search" placeholder="Search..."/>
-          <button class="search-btn" id="search-btn"><i class="fa fa-search"></i></button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>SFS</title>
+    <link rel="stylesheet" href="assets/css/main.css" id="mainStyleSheet"/>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="assets/js/functions.js"></script>
+  </head>
+  <body class="light-mode">
+    <nav id="site-nav">
+      <div class="container">
+        <div class="left-side">
+          <div class="logo"><a href="/index.html">SFS</a></div>
+          <div class="search-form" id="search-form">
+            <input class="search-input" type="search" placeholder="Search..."/>
+            <button class="search-btn" id="search-btn"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <div class="right-side">
+          <ul class="nav-items">
+            <li class="nav-item"><a href="/index.html"><i class="fa fa-globe"></i></a></li>
+            <li class="nav-item">
+              <button id="navOpenBellDropdown" data-state="closed"><i class="fa fa-bell"></i></button>
+            </li>
+            <li class="nav-drodown" id="navBellDropdown">
+              <div class="dropdown-header">
+                <div class="left-side">
+                  <h1>Notifactions</h1><a href="#">Show All</a>
+                </div>
+                <div class="right-side">
+                  <button class="ddHeaderDropdownBtn" data-state="closed"><i class="fa fa-ellipsis-h"></i></button>
+                  <div class="ddHeaderDropdownBox">
+                    <ul class="dropdown-dropdown-menu">
+                      <li class="menu-item">
+                        <button>Mark all as read</button>
+                      </li>
+                      <li class="menu-item"><a href="#">Manage</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <ul class="dropdown-items">
+                <li class="dropdown-item" dataNavBarNotificationId="#">
+                  <div class="notify-icon"></div>
+                  <div class="column">
+                    <p><b>Kuba Milcarz</b> liked your photo</p><span class="notify-date">5 minutes ago</span>
+                  </div>
+                </li>
+                <li class="dropdown-item" dataNavBarNotificationId="#">
+                  <div class="notify-icon"></div>
+                  <div class="column">
+                    <p><b>Kuba Milcarz</b> liked your photo</p><span class="notify-date">5 minutes ago</span>
+                  </div>
+                </li>
+                <li class="dropdown-item" dataNavBarNotificationId="#">
+                  <div class="notify-icon"></div>
+                  <div class="column">
+                    <p><b>Kuba Milcarz</b> liked your photo</p><span class="notify-date">5 minutes ago</span>
+                  </div>
+                </li>
+                <li class="dropdown-item" dataNavBarNotificationId="#">
+                  <div class="notify-icon"></div>
+                  <div class="column">
+                    <p><b>Kuba Milcarz</b> liked your photo</p><span class="notify-date">5 minutes ago</span>
+                  </div>
+                </li>
+                <li class="dropdown-item" dataNavBarNotificationId="#">
+                  <div class="notify-icon"></div>
+                  <div class="column">
+                    <p><b>Kuba Milcarz</b> liked your photo</p><span class="notify-date">5 minutes ago</span>
+                  </div>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button id="navOpenMessageDropdown" data-state="closed"><i class="fa fa-comments"></i></button>
+            </li>
+            <li class="nav-drodown" id="navMessageDropdown">
+              <div class="dropdown-header">
+                <div class="left-side">
+                  <h1>Messages</h1><a href="#">Show All</a>
+                </div>
+                <div class="right-side">
+                  <button class="ddHeaderDropdownBtn" data-state="closed"><i class="fa fa-ellipsis-h"></i></button>
+                  <div class="ddHeaderDropdownBox">
+                    <ul class="dropdown-dropdown-menu">
+                      <li class="menu-item">
+                        <button>New Group</button>
+                      </li>
+                      <li class="menu-item">
+                        <button>New Message</button>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <ul class="dropdown-items">
+                <li class="dropdown-item" dataNavBarNotificationId="#"><a href="#">
+                    <div class="notify-icon"><img src=""/></div>
+                    <div class="column">
+                      <p><b>Kuba Milcarz</b>: Hey Whats up?</p>
+                    </div></a></li>
+                <li class="dropdown-item" dataNavBarNotificationId="#"><a href="#">
+                    <div class="notify-icon"><img src=""/></div>
+                    <div class="column">
+                      <p><b>Kuba Milcarz</b>: Hey Whats up?</p>
+                    </div></a></li>
+                <li class="dropdown-item" dataNavBarNotificationId="#"><a href="#">
+                    <div class="notify-icon"><img src=""/></div>
+                    <div class="column">
+                      <p><b>Kuba Milcarz</b>: Hey Whats up?</p>
+                    </div></a></li>
+                <li class="dropdown-item" dataNavBarNotificationId="#"><a href="#">
+                    <div class="notify-icon"><img src=""/></div>
+                    <div class="column">
+                      <p><b>Kuba Milcarz</b>: Hey Whats up?</p>
+                    </div></a></li>
+                <li class="dropdown-item" dataNavBarNotificationId="#"><a href="#">
+                    <div class="notify-icon"><img src=""/></div>
+                    <div class="column">
+                      <p><b>Kuba Milcarz</b>: Hey Whats up?</p>
+                    </div></a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <button id="navOpenUserDropdown" data-state="closed"><i class="fa fa-user"></i></button>
+            </li>
+            <li class="nav-drodown" id="navUserDropdown">
+              <div class="dropdown-header"><a href="#"><img class="user-avatar" src=""/>
+                  <h1>Kuba Milcarz</h1></a></div>
+              <ul class="dropdown-items">
+                <li class="dropdown-item"><a href="#">Profile</a></li>
+                <li class="dropdown-item"><a href="#">Groups</a></li>
+                <li class="dropdown-item"><a href="#">Explore</a></li>
+                <li class="dropdown-item"><a href="#">Popular</a></li>
+                <li class="dropdown-item">
+                  <button id="PAGESwitchToDarkMode">Dark Mode</button>
+                </li>
+              </ul>
+            </li>
+          </ul>
         </div>
       </div>
-      <div class="right-side">
-        <ul class="nav-items">
-          <li class="nav-item"><a href="#"><i class="fa fa-globe"></i></a></li>
-          <li class="nav-item"><a href="#"><i class="fa fa-bell"></i></a></li>
-          <li class="nav-item"><a href="#"><i class="fa fa-comments"></i></a></li>
-          <li class="nav-item"><a href="#"><i class="fa fa-user"></i></a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</body>
+    </nav>
+  </body>
+</html>

@@ -1,7 +1,15 @@
 body
    margin: 0
    font-family: 'Roboto', sans-serif
+   color: $sfsDark
+   background: $bodyBg
+   &.dark-mode
+      color: darken($sfsDarkText, 22%)
+      background: $sfs-darkmode-bg
 
 .container
    width: 1120px
    margin: 0 auto
+
+.clearfix
+   clear: both

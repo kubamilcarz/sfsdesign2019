@@ -1,0 +1,16 @@
+=resetUl()
+   list-style-type: none
+   margin: 0
+   padding: 0
+
+=resetLink($color)
+   text-decoration: none
+   color: $color
+
+=resetBtn($bg, $color)
+   appearance: none
+   +resetLink($color)
+   background: $bg
+   color: $color
+   padding: 0
+   margin: 0

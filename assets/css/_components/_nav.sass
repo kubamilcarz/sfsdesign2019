@@ -8,8 +8,7 @@
    .left-side
       display: flex
       .logo a
-         text-decoration: none
-         color: $sfsFirst
+         +resetLink($sfsFirst)
          font-weight: bold
          font-size: 25px
       .search-form
@@ -22,6 +21,7 @@
             height: 30px
             width: 400px
             outline: none
+            color: $sfsWhite
             background: $sfsThirdWhite
             font:
                -size: 17px
@@ -44,28 +44,165 @@
 
    .right-side
       .nav-items
-         padding: 0
-         margin: 0
+         +resetUl
          display: flex
          align-items: center
          height: 50px
-         list-style-type: none
          .nav-item
             width: 35px
             height: 35px
             border-radius: 50%
             margin-right: 15px
-            transition: background 60ms ease-in-out
-            &:hover
-               background: $sfsWhite
-            a
-               text-decoration: none
-               color: $sfsDark
+            button, a
+               +resetBtn($bodyBg, $sfsSecondDark)
+               border: none
                display: block
                width: 35px
                height: 35px
                line-height: 35px
                text-align: center
-               font-size: 16px
+               font-size: 17px
+
+               transition: background 60ms ease-in-out
+               &:hover
+                  cursor: pointer
+                  background: $sfsWhite
+               &.dropdown-opened
+                  background: $sfsFirst
+                  height: 50px
+                  i
+                     transform: translateY(-8px)
             &:last-child
                margin-right: 0
+
+         .nav-drodown
+            position: absolute
+            top: 50px
+            width: 300px
+            height: 370px
+            display: none
+            background: $sfsWhite
+            .dropdown-header
+               background: $sfsFirst
+               display: flex
+               align-items: center
+               justify-content: space-between
+               height: 40px
+               box-sizing: border-box
+               padding: 0 10px
+               .left-side
+                  display: flex
+                  align-items: center
+               img.user-avatar
+                  width: 40px
+                  height: 40px
+                  margin-right: 10px
+               h1
+                  margin: 0
+                  color: $sfsDark
+                  font-size: 16px
+                  font-weight: bold
+                  text-transform: uppercase
+               a
+                  +resetLink($sfsDark)
+                  font-size: 9px
+                  margin-left: 10px
+                  text-transform: uppercase
+                  &:hover
+                     text-decoration: underline
+
+               .ddHeaderDropdownBtn
+                  +resetBtn($sfsFirst, $sfsDark)
+                  border: none
+                  font-size: 30px
+                  &:hover
+                     cursor: pointer
+               .ddHeaderDropdownBox
+                  display: block
+                  position: absolute
+                  margin-top: 2.5px
+                  margin-left: -86.5px
+                  background: $sfsFirst
+                  width: 120px
+                  box-sizing: border-box
+                  .dropdown-dropdown-menu
+                     +resetUl
+                     .menu-item
+                        a, button
+                           +resetBtn($sfsFirst, $sfsDark)
+                           border: none
+                           font-size: 12px
+                           text-transform: inherit
+                           text-align: left
+                           display: block
+                           height: 30px
+                           width: 100%
+                           box-sizing: border-box
+                           line-height: 30px
+                           padding: 0 10px
+                           &:hover
+                              cursor: pointer
+                              background: darken($sfsFirst, 15%)
+
+            .dropdown-items
+               +resetUl
+               max-height: 330px
+               overflow-y: scroll
+               .dropdown-item, .dropdown-item > a
+                  +resetLink($sfsDarkText)
+                  display: flex
+                  align-items: center
+                  box-sizing: border-box
+                  padding: 0 15px
+                  height: 77px
+                  .notify-icon
+                     margin: 0 10px 0 0
+                     padding: 0
+                     width: 40px
+                     height: 40px
+                     img
+                        margin: 0
+                        border-radius: 50%
+                        width: 40px
+                        height: 40px
+                  .column
+                     p, a
+                        +resetLink($sfsDarkText)
+                        margin: 0
+                        font-size: 14px
+                     .notify-date
+                        color: $sfsLighterDark
+                        font-size: 13px
+                        font-weight: light
+                        font-style: italic
+
+                  &:nth-child(even)
+                     background: $sfsSecondWhite
+
+            &#navBellDropdown
+               margin-left: -215px
+            &#navMessageDropdown
+               margin-left: -165px
+            &#navUserDropdown
+               margin-left: -45px
+               width: 230px
+               height: auto
+               .dropdown-header
+                  height: 60px
+                  a
+                     +resetLink($sfsDark)
+                     display: block
+                     height: 100%
+                     margin: 0
+                     padding: 0
+                     display: flex
+                     align-items: center
+               .dropdown-items
+                  .dropdown-item
+                     height: 40px
+                     a, button
+                        +resetBtn(transparent, $sfsDarkText)
+                        border: none
+                        font-size: 15px
+                        &:hover
+                           cursor: pointer

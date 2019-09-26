@@ -2,13 +2,64 @@ nav#site-nav
    .container
       .left-side
          .logo
-            a(href="#") SFS
+            a(href="/index.html") SFS
          .search-form#search-form
             input(type="search" placeholder="Search...").search-input
             button.search-btn#search-btn: i.fa.fa-search
       .right-side
          ul.nav-items
-            li.nav-item: a(href="#"): i.fa.fa-globe
-            li.nav-item: a(href="#"): i.fa.fa-bell
-            li.nav-item: a(href="#"): i.fa.fa-comments
-            li.nav-item: a(href="#"): i.fa.fa-user
+            li.nav-item: a(href="/index.html"): i.fa.fa-globe
+            li.nav-item: button#navOpenBellDropdown(data-state="closed"): i.fa.fa-bell
+            li.nav-drodown#navBellDropdown
+               .dropdown-header
+                  .left-side
+                     h1 Notifactions
+                     a(href="#") Show All
+                  .right-side
+                     button(data-state="closed").ddHeaderDropdownBtn: i.fa.fa-ellipsis-h
+                     .ddHeaderDropdownBox
+                        ul.dropdown-dropdown-menu
+                           li.menu-item: button Mark all as read
+                           li.menu-item: a(href="#") Manage
+                        
+               ul.dropdown-items
+                  - for (i = 0; i<5; i++)
+                     li.dropdown-item(dataNavBarNotificationId="#")
+                        .notify-icon
+                        .column
+                           p <b>Kuba Milcarz</b> liked your photo
+                           span.notify-date 5 minutes ago
+                        
+            li.nav-item: button#navOpenMessageDropdown(data-state="closed"): i.fa.fa-comments
+            li.nav-drodown#navMessageDropdown
+               .dropdown-header
+                  .left-side
+                     h1 Messages
+                     a(href="#") Show All
+                  .right-side
+                     button(data-state="closed").ddHeaderDropdownBtn: i.fa.fa-ellipsis-h
+                     .ddHeaderDropdownBox
+                        ul.dropdown-dropdown-menu
+                           li.menu-item: button New Group
+                           li.menu-item: button New Message
+                           
+               ul.dropdown-items
+                  - for (i = 0; i<5; i++)
+                     li.dropdown-item(dataNavBarNotificationId="#")
+                        a(href="#")
+                           .notify-icon: img(src="")
+                           .column
+                              p <b>Kuba Milcarz</b>: Hey Whats up?
+                           
+            li.nav-item: button#navOpenUserDropdown(data-state="closed"): i.fa.fa-user
+            li.nav-drodown#navUserDropdown
+               .dropdown-header
+                  a(href="#")
+                     img(src="").user-avatar
+                     h1 Kuba Milcarz
+               ul.dropdown-items
+                  li.dropdown-item: a(href="#") Profile
+                  li.dropdown-item: a(href="#") Groups
+                  li.dropdown-item: a(href="#") Explore
+                  li.dropdown-item: a(href="#") Popular
+                  li.dropdown-item: button(id="PAGESwitchToDarkMode") Dark Mode
