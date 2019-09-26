@@ -56,22 +56,21 @@ $(function() {
    // dark mode
    $("#PAGESwitchToDarkMode").click(function() {
       if ($("body").hasClass("light-mode")) {
-         $("#mainStyleSheet").attr("href", "assets/css/main.css")
+         $("#mainStyleSheet").attr("href", "/assets/css/main.css")
          $("body").removeClass("light-mode")
          $("body").addClass("dark-mode")
       }
       if ($("body").hasClass("dark-mode")) {
-         $("#mainStyleSheet").attr("href", "assets/css/main-dark.css")
+         $("#mainStyleSheet").attr("href", "/assets/css/main-dark.css")
          $("body").removeClass("dark-mode")
          $("body").addClass("light-mode")
       }
    })
 
    if ($("body").hasClass("light-mode")) {
-      $("#mainStyleSheet").attr("href", "assets/css/main.css")
+      $("#mainStyleSheet").attr("href", "/assets/css/main.css")
    }
    if ($("body").hasClass("dark-mode")) {
-      $("#mainStyleSheet").attr("href", "assets/css/main-dark.css")
+      $("#mainStyleSheet").attr("href", "/assets/css/main-dark.css")
    }
-
 })

@@ -284,6 +284,8 @@ body {
         margin-left: -215px; }
       #site-nav .right-side .nav-items .nav-drodown#navMessageDropdown {
         margin-left: -165px; }
+        #site-nav .right-side .nav-items .nav-drodown#navMessageDropdown .dropdown-items .dropdown-item {
+          margin-left: -10px; }
       #site-nav .right-side .nav-items .nav-drodown#navUserDropdown {
         margin-left: -45px;
         width: 230px;
