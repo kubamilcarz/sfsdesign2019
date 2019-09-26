@@ -42,6 +42,28 @@
          .search-input:focus ~ .search-btn
             color: $sfsFirst
 
+         .search-results
+            display: none
+            width: 400px
+            min-height: 150px
+            background: $sfsWhite
+            position: absolute
+            margin-top: -1px
+            box-sizing: border-box
+            border-left: 1px solid $sfsFirst
+            border-right: 1px solid $sfsFirst
+            border-bottom: 1px solid $sfsFirst
+            &:hover
+               display: block
+
+         .search-input:focus ~ .search-results
+            display: block
+         .search-results:hover ~ .search-input
+            border-color: $sfsFirst
+         .search-results:hover ~ .search-btn
+            color: $sfsFirst
+
+
    .right-side
       .nav-items
          +resetUl
