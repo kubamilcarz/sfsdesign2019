@@ -1,0 +1,71 @@
+#site-nav
+   height: 50px
+   box-shadow: 0 3px 6px rgba(#000, 0.16)
+   .container
+      display: flex
+      justify-content: space-between
+      align-items: center
+   .left-side
+      display: flex
+      .logo a
+         text-decoration: none
+         color: $sfsFirst
+         font-weight: bold
+         font-size: 25px
+      .search-form
+         margin-left: 25px
+         .search-input
+            appearance: none
+            padding: 0
+            margin: 0
+            border: 1px solid $sfsSecondWhite
+            height: 30px
+            width: 400px
+            outline: none
+            background: $sfsThirdWhite
+            font:
+               -size: 17px
+               -weight: light
+            &:focus
+               border-color: $sfsFirst
+         .search-btn
+            appearance: none
+            background: $sfsThirdWhite
+            border: none
+            transform: translateX(-57px)
+            color: $sfsSecondWhite
+            font-size: 13px
+            width: 50px
+            height: 26px
+            &:hover
+               cursor: pointer
+         .search-input:focus ~ .search-btn
+            color: $sfsFirst
+
+   .right-side
+      .nav-items
+         padding: 0
+         margin: 0
+         display: flex
+         align-items: center
+         height: 50px
+         list-style-type: none
+         .nav-item
+            width: 35px
+            height: 35px
+            border-radius: 50%
+            margin-right: 15px
+            transition: background 60ms ease-in-out
+            &:hover
+               background: $sfsWhite
+            a
+               text-decoration: none
+               color: $sfsDark
+               display: block
+               width: 35px
+               height: 35px
+               line-height: 35px
+               text-align: center
+               font-size: 16px
+            &:last-child
+               margin-right: 0
