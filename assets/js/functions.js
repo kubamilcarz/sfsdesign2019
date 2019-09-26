@@ -73,4 +73,5 @@ $(function() {
    if ($("body").hasClass("dark-mode")) {
       $("#mainStyleSheet").attr("href", "assets/css/main-dark.css")
    }
+
 })

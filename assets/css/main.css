@@ -87,9 +87,9 @@ body {
         border-bottom: 1px solid #6AE28A; }
         #site-nav .left-side .search-form .search-results:hover {
           display: block; }
-      #site-nav .left-side .search-form .search-input:focus ~ .search-results {
+      #site-nav .left-side .search-form .search-input:focus ~ .search-results, #site-nav .left-side .search-form .search-input:hover ~ .search-results {
         display: block; }
-      #site-nav .left-side .search-form .search-results:hover ~ .search-input {
+      #site-nav .left-side .search-form .search-results:hover + .search-input {
         border-color: #6AE28A; }
       #site-nav .left-side .search-form .search-results:hover ~ .search-btn {
         color: #6AE28A; }

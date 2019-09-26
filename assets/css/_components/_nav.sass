@@ -56,9 +56,9 @@
             &:hover
                display: block
 
-         .search-input:focus ~ .search-results
+         .search-input:focus ~ .search-results, .search-input:hover ~ .search-results
             display: block
-         .search-results:hover ~ .search-input
+         .search-results:hover + .search-input
             border-color: $sfsFirst
          .search-results:hover ~ .search-btn
             color: $sfsFirst
