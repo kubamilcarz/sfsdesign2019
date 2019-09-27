@@ -1,4 +1,23 @@
 #profile-page-container
+   .profile-columns
+      display: flex
+      width: 100%
+      margin-top: 10px
+      .col
+         margin-right: 25px
+         min-height: 70px
+         .panel
+            background: #fff
+            min-height: 70px
+            box-shadow: 0 3px 6px rgba(#000, 0.16)
+         &:last-child
+            margin-right: 0
+      .left-sidebar
+         width: 275px
+      .SFSPostsContainer
+         width: 520px
+      .right-sidebar
+         width: 275px
 
 #profileHero
    height: 524px
@@ -45,8 +64,7 @@
          align-items: center
          .profile-hero-avatar
             img
-               height: 210px
-               width: 210px
+               +roundUserAvatar(210px)
          .profile-hero-name
             text-align: center
             text-transform: uppercase
@@ -57,7 +75,9 @@
             text-align: center
             font-size: 19px
             font-weight: regular
+            font-style: italic
             margin: 6px 0 0 0
+            color: darken($sfs-gray, 5%)
 
       .right
          .profile-hero-ctas

@@ -121,8 +121,7 @@
                   display: flex
                   align-items: center
                img.user-avatar
-                  width: 40px
-                  height: 40px
+                  +roundUserAvatar(40px)
                   margin-right: 10px
                h1
                   margin: 0
@@ -189,9 +188,7 @@
                      height: 40px
                      img
                         margin: 0
-                        border-radius: 50%
-                        width: 40px
-                        height: 40px
+                        +roundUserAvatar(40px)
                   .column
                      p, a
                         +resetLink($sfsDarkText)

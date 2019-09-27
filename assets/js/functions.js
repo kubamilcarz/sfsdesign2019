@@ -1,6 +1,6 @@
 $(function() {
 
-   $("img").attr("src", "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn1.iconfinder.com%2Fdata%2Ficons%2Fuser-pictures%2F100%2Ffemale1-512.png&f=1&nofb=1")
+   $("img").attr("src", "https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F614810%2Fpexels-photo-614810.jpeg%3Fcs%3Dsrgb%26dl%3Dface-facial-hair-fine-looking-614810.jpg%26fm%3Djpg&f=1&nofb=1")
 
    $("#navOpenBellDropdown").click(function() {
       let state = $(this).attr('data-state')
