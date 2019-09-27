@@ -20,3 +20,10 @@
    height: $width
    object-fit: cover
    border-radius: 50%
+
+=userAvatar($width)
+   box-shadow: inset 0px 0px 10px #000
+   border: 2px solid $sfsDark
+   +roundUserAvatar($width)
+   background-position: center
+   background-size: cover

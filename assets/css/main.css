@@ -1,9 +1,11 @@
 @import 'https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css';
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=latin-ext';
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
   color: #464646;
-  background: #fff; }
+  background: #fff;
+  padding-bottom: 120px; }
   body.dark-mode {
     color: #0e0e0e;
     background: #141F33; }
@@ -26,7 +28,8 @@ body {
   left: 0;
   width: 100%;
   height: 50px;
-  background: #fff; }
+  background: #fff;
+  z-index: 10000; }
   #site-nav .container {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -340,15 +343,81 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  margin-top: 10px; }
+  margin-top: -15px; }
   #profile-page-container .profile-columns .col {
     margin-right: 25px;
     min-height: 70px; }
     #profile-page-container .profile-columns .col .panel {
-      background: #fff;
+      background: white;
       min-height: 70px;
       -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16); }
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+      margin-top: 25px;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 25px 10px 15px 10px; }
+      #profile-page-container .profile-columns .col .panel .panel-header {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between; }
+        #profile-page-container .profile-columns .col .panel .panel-header h1 {
+          margin: 0;
+          font-size: 21px;
+          text-transform: uppercase; }
+        #profile-page-container .profile-columns .col .panel .panel-header button, #profile-page-container .profile-columns .col .panel .panel-header a {
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          text-decoration: none;
+          color: #464646;
+          background: #fff;
+          color: #464646;
+          padding: 0;
+          margin: 0;
+          border: none;
+          font-size: 13px;
+          text-transform: uppercase;
+          font-weight: 300; }
+      #profile-page-container .profile-columns .col .panel .panel-content {
+        margin-top: 25px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline; }
+        #profile-page-container .profile-columns .col .panel .panel-content .panel-item {
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+          #profile-page-container .profile-columns .col .panel .panel-content .panel-item.friend-item {
+            margin-bottom: 10px; }
+          #profile-page-container .profile-columns .col .panel .panel-content .panel-item img {
+            width: 75px;
+            height: 75px;
+            -o-object-fit: cover;
+            object-fit: cover;
+            border-radius: 50%;
+            background-position: center;
+            background-size: cover;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+        #profile-page-container .profile-columns .col .panel .panel-content .photo-name {
+          width: 75px;
+          text-align: center;
+          font-size: 14px;
+          text-transform: uppercase;
+          margin-top: 7px;
+          margin-bottom: 10px; }
     #profile-page-container .profile-columns .col:last-child {
       margin-right: 0; }
   #profile-page-container .profile-columns .left-sidebar {
@@ -400,7 +469,7 @@ body {
         align-items: center; }
         #profileHero .hero-bar .left .profile-hero-stats .stat-item .num {
           font-size: 25px;
-          font-weight: 300; }
+          font-weight: 100; }
         #profileHero .hero-bar .left .profile-hero-stats .stat-item .name {
           margin: 4px 0 0 0;
           font-size: 15px;
@@ -425,22 +494,27 @@ body {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center; }
-      #profileHero .hero-bar .center .profile-hero-avatar img {
+      #profileHero .hero-bar .center .profile-hero-avatar {
+        -webkit-box-shadow: inset 0px 0px 10px #000;
+        box-shadow: inset 0px 0px 10px #000;
+        border: 2px solid #464646;
         width: 210px;
         height: 210px;
         -o-object-fit: cover;
         object-fit: cover;
-        border-radius: 50%; }
+        border-radius: 50%;
+        background-position: center;
+        background-size: cover; }
       #profileHero .hero-bar .center .profile-hero-name {
         text-align: center;
         text-transform: uppercase;
         font-size: 30px;
-        font-weight: bold;
+        font-weight: 700;
         margin: 13px 0 0 0; }
       #profileHero .hero-bar .center .profile-hero-bio {
         text-align: center;
         font-size: 19px;
-        font-weight: regular;
+        font-weight: 300;
         font-style: italic;
         margin: 6px 0 0 0;
         color: #b6b6b6; }

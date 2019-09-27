@@ -16,7 +16,23 @@ html(lang="en")
                include hero.jade
                .profile-columns
                   .left-sidebar.col
-                     .panel
+                     .panel.friends-panel
+                        .panel-header
+                           h1 Friends
+                           button Show All (432)
+                        .panel-content.friends-list
+                           - for (i = 0; i < 6; i++)
+                              .friend-item.panel-item: img(src="")
+                        
+                     .panel.photos-panel
+                        .panel-header
+                           h1 Photos
+                           button Show All (5321)
+                        .panel-content.photos-list
+                           - for (i = 0; i < 6; i++)
+                              .photo-item.panel-item: img(src="")
+                              .photo-name Rome 2017
+                              
                   .SFSPostsContainer.col
                      .panel
                   .right-sidebar.col

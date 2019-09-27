@@ -2,14 +2,57 @@
    .profile-columns
       display: flex
       width: 100%
-      margin-top: 10px
+      margin-top: -15px
       .col
          margin-right: 25px
          min-height: 70px
          .panel
-            background: #fff
+            background: lighten($bodyBg, 5%)
             min-height: 70px
             box-shadow: 0 3px 6px rgba(#000, 0.16)
+            margin-top: 25px
+            box-sizing: border-box
+            padding: 25px 10px 15px 10px
+            .panel-header
+               display: flex
+               align-items: center
+               justify-content: space-between
+               h1
+                  margin: 0
+                  font-size: 21px
+                  text-transform: uppercase
+               button, a
+                  +resetBtn($bodyBg, $sfsDarkText)
+                  border: none
+                  font-size: 13px
+                  text-transform: uppercase
+                  font-weight: 300
+            .panel-content
+               margin-top: 25px
+               display: flex
+               flex-wrap: wrap
+               justify-content: space-around
+               align-items: baseline
+               .panel-item
+                  box-sizing: border-box
+                  &.friend-item
+                     margin-bottom: 10px
+                  img
+                     width: 75px
+                     height: 75px
+                     object-fit: cover
+                     border-radius: 50%
+                     background-position: center
+                     background-size: cover
+                     box-sizing: border-box
+               .photo-name
+                  width: 75px
+                  text-align: center
+                  font-size: 14px
+                  text-transform: uppercase
+                  margin-top: 7px
+                  margin-bottom: 10px
+
          &:last-child
             margin-right: 0
       .left-sidebar
@@ -45,7 +88,7 @@
                align-items: center
                .num
                   font-size: 25px
-                  font-weight: 300
+                  font-weight: 100
                .name
                   margin: 4px 0 0 0
                   font-size: 15px
@@ -63,18 +106,17 @@
          flex-direction: column
          align-items: center
          .profile-hero-avatar
-            img
-               +roundUserAvatar(210px)
+            +userAvatar(210px)
          .profile-hero-name
             text-align: center
             text-transform: uppercase
             font-size: 30px
-            font-weight: bold
+            font-weight: 700
             margin: 13px 0 0 0
          .profile-hero-bio
             text-align: center
             font-size: 19px
-            font-weight: regular
+            font-weight: 300
             font-style: italic
             margin: 6px 0 0 0
             color: darken($sfs-gray, 5%)
